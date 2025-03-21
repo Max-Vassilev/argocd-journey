@@ -1,19 +1,41 @@
-# argocd-journey
+# ArgoCD Journey
 
-colima start
+This is my learning repository for ArgoCD.
 
-minikube start
+## What is ArgoCD?
 
-kubectl create namespace argocd
+ArgoCD is a GitOps continuous delivery tool for Kubernetes that synchronizes clusters with desired states defined in Git repositories.
 
-kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
+## Commands
 
-kubectl get pods -A
+1. **Start Colima**  
+   `colima start`
 
-kubectl port-forward -n argocd svc/argocd-server 8080:443
+2. **Start Minikube**  
+   `minikube start`
 
-kubectl get secret argocd-initial-admin-secret -n argocd -o yaml
+3. **Create Namespace**  
+   `kubectl create namespace argocd`
 
-echo PASSWORD | base64 --decode
+4. **Apply ArgoCD Manifests**  
+   `kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml`
 
-![image](https://github.com/user-attachments/assets/aad94b9f-e165-4d5b-accf-655a03f17d7b)
+5. **Verify Pods**  
+   `kubectl get pods -A`
+
+6. **Port-forward ArgoCD Server**  
+   `kubectl port-forward -n argocd svc/argocd-server 8080:443`
+
+7. **Get Initial Admin Secret**  
+   `kubectl get secret argocd-initial-admin-secret -n argocd -o yaml`
+
+8. **Decode Password**  
+   `echo PASSWORD | base64 --decode`
+
+## Access ArgoCD Web UI
+
+Visit `http://localhost:8080` and log in with the `admin` username and decoded password.
+
+## Screenshot
+
+![ArgoCD Web UI](https://github.com/user-attachments/assets/aad94b9f-e165-4d5b-accf-655a03f17d7b)
