@@ -32,6 +32,12 @@ ArgoCD is a **Pull-based GitOps continuous delivery tool** for Kubernetes that s
 8. **Decode Password**  
    `echo PASSWORD | base64 --decode`
 
+9. **Apply ApplicationSet**  
+   `kubectl apply -f applicationset.yaml -n argocd`
+
+10. **Verify ApplicationSets**  
+    `kubectl get applicationsets -n argocd`
+
 ## Access ArgoCD Web UI
 
 Visit `http://localhost:8080` and log in with the `admin` username and decoded password.
