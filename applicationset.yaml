@@ -5,20 +5,23 @@ metadata:
   namespace: argocd
 spec:
   generators:
-    - directory:
-        path: apps/*
+    - git:
+        repoURL: https://github.com/Max-Vassilev/argocd-journey
+        revision: HEAD
+        directories:
+          - path: apps/*
   template:
     metadata:
-      name: "{{path.basename}}"
+      name: "{{folder.metadata.name}}-argo-application"
     spec:
       project: default
       source:
         repoURL: https://github.com/Max-Vassilev/argocd-journey
         targetRevision: HEAD
-        path: "{{path}}"
+        path: "{{folder.path}}"
       destination:
         server: https://kubernetes.default.svc
-        namespace: argocd
+        namespace: "{{folder.metadata.name}}"
       syncPolicy:
         automated:
           selfHeal: true
