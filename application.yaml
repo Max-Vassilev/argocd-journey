@@ -1,5 +1,5 @@
 apiVersion: argoproj.io/v1alpha1
-kind: Aplication
+kind: Application
 metadata:
   name: myapp-argo-application
   namespace: argocd
@@ -16,7 +16,7 @@ spec:
 
 syncPolicy:
   syncOptions:
-    - CreateNameSpace=true
+    - CreateNamespace=true
 
   automated:
     selfHeal: true
