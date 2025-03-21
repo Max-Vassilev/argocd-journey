@@ -10,13 +10,13 @@ spec:
     repoURL: https://github.com/Max-Vassilev/argocd-journey
     targetRevision: HEAD
     path: dev
-  destination: 
+  destination:
     server: https://kubernetes.default.svc
     namespace: myapp
-  
+
 syncPolicy:
   syncOptions:
-  - CreateNameSpace=true
+    - CreateNameSpace=true
 
   automated:
     selfHeal: true
