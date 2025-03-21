@@ -44,6 +44,6 @@ Visit `http://localhost:8080` and log in with the `admin` username and decoded p
 
 ## Screenshot
 
-![image](https://github.com/user-attachments/assets/aabddd57-299a-4730-b283-217b05beb458)
+![image](https://github.com/user-attachments/assets/bf0c8235-815c-498e-b84e-dcac8b2c8851)
 
 ![ArgoCD Web UI](https://github.com/user-attachments/assets/aad94b9f-e165-4d5b-accf-655a03f17d7b)
