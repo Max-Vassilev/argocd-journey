@@ -9,7 +9,7 @@ spec:
   source:
     repoURL: https://github.com/Max-Vassilev/argocd-journey
     targetRevision: HEAD
-    path: dev
+    path: dev/app1
   destination:
     server: https://kubernetes.default.svc
     namespace: myapp
