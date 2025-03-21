@@ -9,8 +9,7 @@ spec:
         repoURL: https://github.com/Max-Vassilev/argocd-journey
         revision: HEAD
         directories:
-          - path: dev/app1
-          - path: dev/app2
+          - path: dev/*
   template:
     metadata:
       name: "{{path.basename}}"
