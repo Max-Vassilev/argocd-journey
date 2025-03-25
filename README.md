@@ -22,35 +22,45 @@ colima start --with-kubernetes
  
 ## Commands
 
-1. **Start Colima**  
-   `colima start`
+**Create Namespace**  
+   ```
+   kubectl create namespace argocd
+   ```
 
-2. **Start Minikube**  
-   `minikube start`
+**Apply ArgoCD Manifests**  
+   ```
+   kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
+   ```
 
-3. **Create Namespace**  
-   `kubectl create namespace argocd`
+**Verify Pods**  
+   ```
+   kubectl get pods -A
+   ```
 
-4. **Apply ArgoCD Manifests**  
-   `kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml`
+**Port-forward ArgoCD Server**  
+   ```
+   kubectl port-forward -n argocd svc/argocd-server 8080:443
+   ```
 
-5. **Verify Pods**  
-   `kubectl get pods -A`
+**Get Initial Admin Secret**  
+   ```
+   kubectl get secret argocd-initial-admin-secret -n argocd -o yaml
+   ```
 
-6. **Port-forward ArgoCD Server**  
-   `kubectl port-forward -n argocd svc/argocd-server 8080:443`
+**Decode Password**  
+   ```
+   echo PASSWORD | base64 --decode
+   ```
 
-7. **Get Initial Admin Secret**  
-   `kubectl get secret argocd-initial-admin-secret -n argocd -o yaml`
+**Apply ApplicationSet**  
+   ```
+   kubectl apply -f applicationset.yaml -n argocd
+   ```
 
-8. **Decode Password**  
-   `echo PASSWORD | base64 --decode`
-
-9. **Apply ApplicationSet**  
-   `kubectl apply -f applicationset.yaml -n argocd`
-
-10. **Verify ApplicationSets**  
-    `kubectl get applicationsets -n argocd`
+**Verify ApplicationSets**  
+    ```
+    kubectl get applicationsets -n argocd
+    ```
 
 ## Access ArgoCD Web UI
 
