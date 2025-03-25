@@ -14,6 +14,12 @@ ArgoCD is a **Pull-based GitOps continuous delivery tool** for Kubernetes that s
 - **ApplicationSet**:  
    **ApplicationSet:** An extension that dynamically manages multiple apps using generators.
 
+## Prerequisites
+You need a running Kubernetes cluster to use Helm. For local Kubernetes with Colima, use the following command:
+``` 
+colima start --with-kubernetes
+ ```
+ 
 ## Commands
 
 1. **Start Colima**  
