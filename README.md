@@ -1,7 +1,5 @@
 # argocd-journey
 
-This is my learning repository for ArgoCD.
-
 ## Definition:
 ArgoCD is a **Pull-based GitOps continuous delivery tool** for Kubernetes that synchronizes clusters with desired states defined in Git repositories. It monitors Git repositories and automatically applies changes to Kubernetes clusters, ensuring they stay in sync with the declared configuration.
 
