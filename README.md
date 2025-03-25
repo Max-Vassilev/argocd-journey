@@ -1,4 +1,4 @@
-# ArgoCD Journey
+# argocd-journey
 
 This is my learning repository for ArgoCD.
 
@@ -52,7 +52,7 @@ ArgoCD is a **Pull-based GitOps continuous delivery tool** for Kubernetes that s
 
 Visit `http://localhost:8080` and log in with the `admin` username and decoded password.
 
-## Screenshot
+## Screenshots
 
 ![image](https://github.com/user-attachments/assets/bf0c8235-815c-498e-b84e-dcac8b2c8851)
 
